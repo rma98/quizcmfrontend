@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online da CM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindos ao primeiro quiz on-line da CM</h1>
+        <div id="intro">
+            <p>Apresente seu nome, soldado de Maria</p>
+            <input type="text" id="username" placeholder="Digite seu nome">
+            <button onclick="startQuiz()">Iniciar Quiz</button>
+        </div>
+
+        <div id="quiz-container" style="display:none;">
+            <h2 id="question"></h2>
+            <div id="options-container"></div>
+            <p id="timer"></p>
+        </div>
+
+        <div id="ranking-container" style="display:none;">
+            <h2>Ranking da Etapa</h2>
+            <p id="player-position"></p> <!-- Exibe a posição do jogador -->
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="nextStepButton" style="display:none;" onclick="nextStep()">Avançar para Próxima Etapa</button>
+            <p id="participation-message" style="display:none;"></p>
+        </div>
+
+        <div id="final-result-container" style="display:none;">
+            <h2>Resultado Final</h2>
+            <p id="final-score"></p>
+            <p id="final-message"></p>
+            <h3>Ranking Final</h3>
+            <table id="final-ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="resetQuizButton" style="display:none;" onclick="showIntro()">Voltar para a Tela Inicial</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
