@@ -34,4 +34,4 @@ Sinta-se à vontade para contribuir com melhorias. Faça um fork do repositório
 
 ## Licença
 
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
+Este projeto está licenciado sob a MIT License.
