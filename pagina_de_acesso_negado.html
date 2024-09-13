@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Negado</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para o corpo da página com a imagem de fundo */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5 url('img/foto01.jpg') center;
+            background-size: contain;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container de acesso negado */
+        .access-denied-container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com 90% de opacidade */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .access-denied-container h1 {
+            color: #f44336; /* Cor para destacar a mensagem de erro */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .access-denied-container p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .access-denied-container a {
+            margin: 0 10px;
+        }
+
+        .access-denied-container .info {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links img {
+            width: 30px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+        }
+
+        .social-links img:hover {
+            border: .2rem solid rgba(255, 255, 255, 0.637);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+            transition: transform .3s border 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="access-denied-container">
+        <h1>Acesso Negado</h1>
+        <p>O ranking geral dos jogadores estará disponível em algumas horas.</p>
+        <p>Por favor, entre em contato com o organizador para obter o link de acesso ao ranking geral.</p>
+        <p class="info">Se precisar de mais informações, o organizador estará disponível para ajudar.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/robson.albuquerque98/" target="_blank">
+                <img src="img/logo-instagram.jpg" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
