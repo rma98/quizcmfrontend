@@ -1,29 +1,35 @@
-// Define o horário limite
-const limitHour = 23; // Horário limite em horas (24h)
-const limitMinute = 0; // Minuto limite
+// Define a data limite de acesso
+const limitDate = new Date('2024-09-13T23:00:00'); // Data e hora limite
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtém a data e hora atuais
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    
-    console.log(`Hora atual: ${currentHour}:${currentMinute}`);
-    
-    // Verifica se o horário atual é após o horário limite
-    if (currentHour > limitHour || (currentHour === limitHour && currentMinute >= limitMinute)) {
-        console.log('Acesso negado.');
-        // Redireciona para a página de acesso negado
+    // Verifica se o usuário já acessou a página
+    if (localStorage.getItem('accessedOnce')) {
+        // Redireciona para a página de acesso negado se o usuário já acessou
         window.location.href = 'pagina_de_acesso_negado.html';
     } else {
-        console.log('Acesso permitido.');
-        startTimer(); // Inicia o cronômetro de 4 minutos
+        // Define a flag "accessedOnce" como "true"
+        localStorage.setItem('accessedOnce', 'true');
+
+        // Obtém a data e hora atuais
+        const now = new Date();
+        
+        console.log(`Data atual: ${now.toLocaleString()}`);
+        
+        // Verifica se a data e hora atuais são após o limite
+        if (now > limitDate) {
+            console.log('Acesso negado.');
+            // Redireciona para a página de acesso negado
+            window.location.href = 'pagina_de_acesso_negado.html';
+        } else {
+            console.log('Acesso permitido.');
+            startTimer(); // Inicia o cronômetro de 3 minutos
+        }
     }
 });
 
-// Função para iniciar o cronômetro de 4 minutos
+// Função para iniciar o cronômetro de 3 minutos
 function startTimer() {
-    let timer = 240; // 4 minutos em segundos (4 * 60)
+    let timer = 180; // 3 minutos em segundos (3 * 60)
     const timerDisplay = document.getElementById('timer');
 
     const interval = setInterval(function() {
@@ -44,6 +50,13 @@ function startTimer() {
         timer--;
     }, 1000); // Atualiza o cronômetro a cada segundo
 }
+
+// Em pagina_de_acesso_negado.html, adicione este script para limpar a flag de acesso
+// Adicione o seguinte script na página de acesso negado
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     localStorage.removeItem('accessedOnce');
+// });
 
 // Monitorando a visibilidade da aba
 // document.addEventListener('visibilitychange', function () {
