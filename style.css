@@ -42,3 +42,16 @@ iframe {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
+
+.warning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    z-index: 1000; /* Certifica-se de que a mensagem fique no topo de outros elementos */
+}

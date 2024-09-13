@@ -7,35 +7,13 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+    <div class="warning-message">
+        <p>⚠️ Atenção: Se você sair desta aba ou tentar abrir uma nova aba, o acesso ao quiz será negado.</p>
+    </div>
     <div class="quiz-container">
         <div id="loadingMessage" style="text-align:center; padding: 20px;">Bem-vindos ao primeiro quiz on-line da CM</div>
         <iframe id="quizIframe" title="Formulário de Quiz" aria-label="Formulário de Quiz Google" src="https://docs.google.com/forms/d/e/1FAIpQLScTU-Jw_Kh7Av7H1RMpQHEpvDAOI1kMuuOlTIY0PZzdm5wtuA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </div>
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Define o horário limite
-            const limitHour = 23; // Horário limite em horas (24h)
-            const limitMinute = 35; // Minuto limite
-            
-            // Obtém a data e hora atuais
-            const now = new Date();
-            const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
-            
-            console.log(`Hora atual: ${currentHour}:${currentMinute}`);
-            
-            // Verifica se o horário atual é após o horário limite
-            if (currentHour > limitHour || (currentHour === limitHour && currentMinute >= limitMinute)) {
-                console.log('Acesso negado.');
-                // Redireciona ou exibe uma mensagem
-                // document.body.innerHTML = '<h1>Acesso Negado</h1><p>O acesso à página foi encerrado.</p>';
-                // Alternativamente, você pode redirecionar para outra página:
-                window.location.href = 'pagina_de_acesso_negado.html';
-        } else {
-            console.log('Acesso permitido.');
-        }
-    });
-    </script> -->
+    <script src="script.js"></script>
 </body>
 </html>
