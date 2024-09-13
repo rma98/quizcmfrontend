@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Função para iniciar o cronômetro de 4 minutos
 function startTimer() {
-    let timer = 240; // 4 minutos em segundos (4 * 60)
+    let timer = 180; // 3 minutos em segundos (3 * 60)
     const timerDisplay = document.getElementById('timer');
 
     const interval = setInterval(function() {
@@ -46,9 +46,9 @@ function startTimer() {
 }
 
 // Monitorando a visibilidade da aba
-document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
+// document.addEventListener('visibilitychange', function () {
+//     if (document.hidden) {
         // Redireciona para a página de acesso negado
-        window.location.href = 'pagina_de_acesso_negado.html';
-    }
-});
+//         window.location.href = 'pagina_de_acesso_negado.html';
+//     }
+// });

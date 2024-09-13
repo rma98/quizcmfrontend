@@ -43,7 +43,7 @@ iframe {
     scroll-behavior: smooth;
 }
 
-.warning-message {
+/* .warning-message {
     position: fixed;
     top: 0;
     left: 0;
@@ -53,5 +53,5 @@ iframe {
     text-align: center;
     padding: 10px;
     font-weight: bold;
-    z-index: 1000; /* Certifica-se de que a mensagem fique no topo de outros elementos */
-}
+    z-index: 1000; /* Certifica-se de que a mensagem fique no topo de outros elementos
+} */
