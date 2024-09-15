@@ -39,8 +39,8 @@ const quizData = {
         // Etapa 3 - 7 Perguntas
         { id: 1, question: "O que construimos no Natal como Católicos celebrando tal momento?", options: ["Ceia de Natal", "Reunião Familiar", "Missa do galo", "Presépio"], answer: 3, time: 10 },
         { id: 2, question: "Qual salmo afirma que se passarmos pela sombra da morte nada devemos temer?", options: ["20", "21", "22", "23"], answer: 2, time: 10 },
-        { id: 3, question: "Qual é o nome da reunião de Dogmas Católicos", options: ["Bíblia", "Torá", "Encíclia", "Catecismo"], answer: 3, time: 10 },
-        { id: 4, question: "Onde Jesus encontrou Zaqueu", options: ["Em casa", "No caminho", "Capadócia", "Árvore"], answer: 3, time: 6 },
+        { id: 3, question: "Qual é o nome da reunião de Dogmas Católicos?", options: ["Bíblia", "Torá", "Encíclia", "Catecismo"], answer: 3, time: 10 },
+        { id: 4, question: "Onde Jesus encontrou Zaqueu?", options: ["Em casa", "No caminho", "Capadócia", "Árvore"], answer: 3, time: 6 },
         { id: 5, question: "Qual pai quase matou seu filho na Bíblia?", options: ["Moisés", "Noé", "Abraão", "Davi"], answer: 2, time: 6 },
         { id: 6, question: "Quantas virgens tinham na Parábola de Jesus?", options: ["8", "10", "12", "14"], answer: 1, time: 6 },
         { id: 7, question: "Miguel lutou contra que animal?", options: ["Bezerro de Ouro", "Leões", "Dragão", "Golias"], answer: 2, time: 10 },
