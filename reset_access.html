@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso à Etapa 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5 url('img/foto01.jpg') center;
+            background-size: contain;
+            font-family: Arial, sans-serif;
+        }
+
+        .reset-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="reset-container">
+        <h1>Acesso à Etapa 2 do Quiz</h1>
+        <p>Você está prestes a avançar para a etapa 2 do quiz. Esta ação só pode ser feita uma vez.</p>
+        <button onclick="giveAccess()">Avançar para Etapa 2</button>
+    </div>
+
+    <script>
+        function giveAccess() {
+            // Função para dar acesso à etapa 2
+            alert('Acesso concedido à Etapa 2!');
+            window.location.href = 'forms02.html'; // Redireciona para a etapa 2 do quiz
+        }
+
+        // Definir o limite máximo de renovações permitidas
+        const MAX_RENOVACOES = 1;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtém o número de renovações feitas do localStorage
+            let renovacoes = parseInt(localStorage.getItem('renovacoes')) || 0;
+
+            // Verifica se o limite de renovações foi atingido
+            if (renovacoes >= MAX_RENOVACOES) {
+                alert('Você atingiu o número máximo para ter acesso à etapa 2 do quiz.');
+                // Redireciona para a página de acesso negado
+                window.location.href = 'pagina_de_acesso_negado.html';
+                return;
+            }
+
+            // Limpa a flag "accessedOnce" para permitir novo acesso
+            localStorage.removeItem('accessedOnce');
+            
+            // Incrementa o contador de renovações
+            renovacoes++;
+            localStorage.setItem('renovacoes', renovacoes);
+
+            // Exibe uma mensagem de renovação bem-sucedida
+            console.log('Acesso renovado. Renovações:', renovacoes);
+        });
+    </script>
+</body>
+</html>

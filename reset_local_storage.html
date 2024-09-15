@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetar Histórico de Acesso</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5 url('img/foto01.jpg') center;
+            background-size: contain;
+            font-family: Arial, sans-serif;
+        }
+
+        .reset-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="reset-container">
+        <h1>Resetar Histórico de Acesso</h1>
+        <p>Esta ação irá zerar o histórico de acesso e permitir que você recomece o processo.</p>
+        <button onclick="resetLocalStorage()">Resetar Histórico</button>
+    </div>
+
+    <script>
+        function resetLocalStorage() {
+            // Confirmação antes de apagar o histórico
+            if (confirm('Tem certeza de que deseja resetar o histórico de acesso?')) {
+                // Remove o item de renovações
+                localStorage.removeItem('renovacoes');
+                // Remove a flag de acesso único
+                localStorage.removeItem('accessedOnce');
+                
+                alert('Histórico de acesso resetado com sucesso!');
+                window.location.href = 'reset_access.html'; // Redireciona para a página inicial ou página desejada
+            }
+        }
+    </script>
+</body>
+</html>
