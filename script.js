@@ -1,20 +1,20 @@
 // Define a data limite de acesso
-const limitDate = new Date('2024-09-13T23:00:00'); // Data e hora limite
+const limitDate = new Date('2024-09-15T23:00:00'); // Data e hora limite
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Verifica se o usuário já acessou a página
+    // Obtém a data e hora atuais
+    const now = new Date();  // Certifique-se de que 'now' está sendo definido corretamente
+
+    // Verifica se o usuário já acessou a página anteriormente
     if (localStorage.getItem('accessedOnce')) {
         // Redireciona para a página de acesso negado se o usuário já acessou
         window.location.href = 'pagina_de_acesso_negado.html';
     } else {
-        // Define a flag "accessedOnce" como "true"
+        // Define a flag "accessedOnce" como "true" para marcar que o usuário acessou
         localStorage.setItem('accessedOnce', 'true');
 
-        // Obtém a data e hora atuais
-        const now = new Date();
-        
         console.log(`Data atual: ${now.toLocaleString()}`);
-        
+
         // Verifica se a data e hora atuais são após o limite
         if (now > limitDate) {
             console.log('Acesso negado.');
@@ -51,17 +51,10 @@ function startTimer() {
     }, 1000); // Atualiza o cronômetro a cada segundo
 }
 
-// Em pagina_de_acesso_negado.html, adicione este script para limpar a flag de acesso
-// Adicione o seguinte script na página de acesso negado
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     localStorage.removeItem('accessedOnce');
-// });
-
 // Monitorando a visibilidade da aba
 // document.addEventListener('visibilitychange', function () {
 //     if (document.hidden) {
-        // Redireciona para a página de acesso negado
+//         // Redireciona para a página de acesso negado se o usuário ocultar a aba
 //         window.location.href = 'pagina_de_acesso_negado.html';
 //     }
 // });
