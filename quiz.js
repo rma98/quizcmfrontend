@@ -36,7 +36,7 @@ const quizData = {
         { id: 10, question: "Do que se trata o Evangelho dos atos dos Apóstolos?", options: ["Reuniões apostólicas e discurssão da Torá", "Leitura das profecias e Avivamento", "Primeiros anos apostólicos e Leitura da Torá", "Primeiros anos da igreja e anuncio do Evangelho"], answer: 3, time: 15 },
     ],
     3: [
-        // Etapa 3 - 10 Perguntas
+        // Etapa 3 - 7 Perguntas
         { id: 1, question: "O que construimos no Natal como Católicos celebrando tal momento?", options: ["Ceia de Natal", "Reunião Familiar", "Missa do galo", "Presépio"], answer: 3, time: 10 },
         { id: 2, question: "Qual salmo afirma que se passarmos pela sombra da morte nada devemos temer?", options: ["20", "21", "22", "23"], answer: 2, time: 10 },
         { id: 3, question: "Qual é o nome da reunião de Dogmas Católicos", options: ["Bíblia", "Torá", "Encíclia", "Catecismo"], answer: 3, time: 10 },
