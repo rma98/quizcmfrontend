@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Função para iniciar o cronômetro de 3 minutos
 function startTimer() {
-    let timer = 180; // 3 minutos em segundos (3 * 60)
+    let timer = 120; // 2 minutos em segundos (2 * 60)
     const timerDisplay = document.getElementById('timer');
 
     const interval = setInterval(function() {
