@@ -1,5 +1,5 @@
 // Define a data limite de acesso
-const limitDate = new Date('2024-09-15T23:00:00'); // Data e hora limite
+const limitDate = new Date('2024-09-16T23:00:00'); // Data e hora limite
 
 document.addEventListener('DOMContentLoaded', function() {
     // Obtém a data e hora atuais
